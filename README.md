@@ -20,9 +20,9 @@
   <br />
   <a href="#usage">Usage</a>
   &middot;
-  <a href="https://github.com/YOUR_USERNAME/pachealth/issues">Report Bug</a>
+  <a href="https://github.com/bowntowr/pachealth/issues">Report Bug</a>
   &middot;
-  <a href="https://github.com/YOUR_USERNAME/pachealth/issues">Request Feature</a>
+  <a href="https://github.com/bowntowr/pachealth/issues">Request Feature</a>
 </p>
 
 </div>
