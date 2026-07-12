@@ -9,9 +9,9 @@ on:
 jobs:
   opencode:
     if: |
-      contains(github.event.comment.body, ' /oc') ||
-      startsWith(github.event.comment.body, '/oc') ||
-      contains(github.event.comment.body, ' /opencode') ||
+      contains(github.event.comment.body, ' /oc') || 
+      startsWith(github.event.comment.body, '/oc') || 
+      contains(github.event.comment.body, ' /opencode') || 
       startsWith(github.event.comment.body, '/opencode')
     runs-on: ubuntu-latest
     permissions:
@@ -19,15 +19,25 @@ jobs:
       contents: read
       pull-requests: read
       issues: read
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
           persist-credentials: false
 
+      - name: Install and Start Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          ollama serve &
+          sleep 5
+
+      - name: Pull Gemma4 Model
+        run: ollama pull gemma4
+
       - name: Run opencode
         uses: anomalyco/opencode/github@latest
         env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_API_KEY: "ollama"
         with:
-          model: opencode/claude-sonnet-4-6
+          model: "ollama/gemma4"
