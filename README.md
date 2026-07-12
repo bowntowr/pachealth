@@ -1,4 +1,3 @@
-````md
 <a id="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
@@ -237,6 +236,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-url]: https://github.com/YOUR_USERNAME/pachealth/blob/main/LICENSE
 [issues-shield]: https://img.shields.io/github/issues/YOUR_USERNAME/pachealth?style=for-the-badge
 [issues-url]: https://github.com/YOUR_USERNAME/pachealth/issues
-
-```
-```
